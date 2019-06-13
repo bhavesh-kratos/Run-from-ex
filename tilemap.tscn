@@ -1,0 +1,114 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (1).png" type="Texture" id=1]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (2).png" type="Texture" id=2]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (7).png" type="Texture" id=3]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (8).png" type="Texture" id=4]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (14).png" type="Texture" id=5]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (16).png" type="Texture" id=6]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (9).png" type="Texture" id=7]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Tile (15).png" type="Texture" id=8]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Bones (1).png" type="Texture" id=9]
+[ext_resource path="res://GraveyardTileset/png/Tiles/Bones (3).png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.4794, 10.2456 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 65.1798, 66.4406 )
+
+[node name="Node" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 183.142, 159.401 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 1 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
+position = Vector2( 2.53329, 5.15645 )
+polygon = PoolVector2Array( -63.3949, -65.713, -66.3951, -35.8494, -59.642, -28.3599, -59.642, -20.2396, -65.2713, -2.37511, -59.642, 17.1135, -65.2713, 51.2185, -65.2713, 60.9628, 62.3248, 62.5868, 62.3248, 62.5868, 63.9283, -65.9931 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 349.678, 159.401 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+position = Vector2( -0.367615, -53.4879 )
+shape = SubResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 512.119, 159.401 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 3 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite3/StaticBody2D"]
+polygon = PoolVector2Array( -65.3714, -62.4649, -65.3714, 62.5868, -65.3714, 62.5868, 65.9775, 62.5868, 64.1011, 62.5868, 64.1011, -67.337, 64.1011, -67.337, 15.3143, -60.8408 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 518.902, 376.458 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 4 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite8/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 664.737, 172.967 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 5 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite4/StaticBody2D"]
+position = Vector2( 1.87646, 3.24811 )
+polygon = PoolVector2Array( -63.9669, -66.6877, -63.9669, -37.4548, -56.4612, -22.8384, -52.7084, -14.7182, -22.6859, -9.84601, -24.5623, -16.3422, -11.4274, 1.52232, -26.4386, 4.77042, 1.70752, 19.3869, 35.4829, 29.1311, 37.3594, 29.1311, 59.8764, 30.7552, 61.7527, 30.7552, 63.6291, 27.5071, 63.6291, -66.6877, 63.6291, -66.6877 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 159.401, 379.85 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 6 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 664.736, 172.967 )
+scale = Vector2( 0.682046, 0.788031 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PoolVector2Array( -805.097, 199.296, -804.352, 291.545, -805.842, 290.9, -802.116, 290.9, -793.172, 292.835, -783.482, 290.9, -753.669, 286.384, -760.377, 281.223, -751.433, 277.998, -735.035, 272.192, -732.054, 265.741, -725.346, 261.225, -680.372, 221.071, -708.948, 250.904, -698.514, 251.549, -687.334, 243.808, -679.88, 231.551, -677.644, 225.1, -677.644, 220.585, -678.39, 203.812, -685.098, 197.361, -768.611, 198.109 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 827.529, 166.184 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 7 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 345.934, 383.241 )
+scale = Vector2( 0.682046, 0.788031 )
+texture = ExtResource( 8 )
+region_rect = Rect2( -10, 0, 120, 100 )
+
+[node name="Bones (1)" type="Sprite" parent="."]
+position = Vector2( 682.792, 372.311 )
+scale = Vector2( 0.605669, 0.614242 )
+texture = ExtResource( 9 )
+
+[node name="Bones (3)" type="Sprite" parent="."]
+position = Vector2( 823.242, 360.79 )
+texture = ExtResource( 10 )

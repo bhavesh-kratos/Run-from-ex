@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://coin.gd" type="Script" id=1]
+[ext_resource path="res://GraveyardTileset/png/Objects/coin.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 25.8486
+
+[node name="Coin" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.47262, 14.9819 )
+scale = Vector2( 0.024, 0.024 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.54713, 15.2828 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
